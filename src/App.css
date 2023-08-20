@@ -68,6 +68,9 @@ footer a {
   font-weight: bold;
 }
 
+/* ----------------------------------- */
+/* --------------- MEDIA ------------- */
+/* ----------------------------------- */
 @media (max-width: 720px) {
   input + div {
     align-items: center;
