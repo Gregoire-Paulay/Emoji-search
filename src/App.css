@@ -1,35 +1,78 @@
 body {
   text-align: center;
 }
-
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 h1 {
-  font-size: 30px;
+  font-size: 40px;
   margin: 30px 0;
 }
 /* ----------------------------------- */
 /* -------------- HEADER ------------- */
 /* ----------------------------------- */
-header input {
-  margin-bottom: 40px;
-  width: 300px;
-  background-color: whitesmoke;
-  padding: 8px;
-  border: 1px solid lightgray;
-  border-radius: 6px;
-}
+
 /* ----------------------------------- */
 /* --------------- MAIN -------------- */
 /* ----------------------------------- */
+h1 + input {
+  margin-bottom: 40px;
+  width: 400px;
+  background-color: lightgray;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
 
-button {
+input + div {
   display: flex;
-  margin: 0 auto;
-  width: 500px;
-  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  gap: 8px;
+}
+
+div > button {
+  display: flex;
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  font-size: 18px;
+}
+
+div > button:hover {
+  background-color: lightgray;
+}
+div > button:hover::after {
+  content: "Click to copy !";
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-size: 16px;
 }
 /* ----------------------------------- */
 /* -------------- FOOTER ------------- */
 /* ----------------------------------- */
 footer {
-  padding-top: 200px;
+  padding: 30px;
+  background-color: whitesmoke;
+  margin-top: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 720px) {
+  input + div {
+    align-items: center;
+  }
+  div > button {
+    width: 80vw;
+  }
 }
